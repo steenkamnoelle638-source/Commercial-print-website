@@ -37,8 +37,8 @@ def gal(n=None):
     items = GAL[:n] if n else GAL
     f = "".join(f'<figure><img src="/images/gallery/{s}.jpg" alt="{t} printed by Novus Print" loading="lazy" width="600" height="450" onerror="this.remove()"><figcaption>{t}</figcaption></figure>' for t,s in items)
     return f'<div class="gal">{f}</div>'
-os.makedirs("public/products", exist_ok=True); os.makedirs("public/images/gallery", exist_ok=True)
-w = lambda p,s: open("public/"+p,"w").write(s)
+os.makedirs("docs/products", exist_ok=True); os.makedirs("docs/images/gallery", exist_ok=True)
+w = lambda p,s: open("docs/"+p,"w").write(s)
 groups = {}
 for p in P: groups.setdefault(p[2],[]).append(p)
 cards = "".join(f'<div class="grp"><h3>{g}</h3>' + "".join(f'<a class="pc" href="/products/{s}.html"><b>{t}</b><span>{d}</span></a>' for s,t,_,d,_ in ps) + '</div>' for g,ps in groups.items())
@@ -88,4 +88,5 @@ footer{border-top:1px solid var(--line)}.fine{font-size:.8rem;color:var(--mute)}
 @media(min-width:900px){.bar{left:auto;right:1.2rem;bottom:1.2rem;width:auto}.bar a:first-child{display:none}.bar a{border-radius:99px;padding:.8rem 1.3rem}body{padding-bottom:0}}
 @media(max-width:800px){.hero,.band,.quote{grid-template-columns:1fr}.quote>div{justify-self:start}.reg{max-width:200px}}''')
 w("app.js",'document.querySelectorAll(".gal img").forEach(i=>i.addEventListener("click",()=>{const d=document.createElement("div");d.className="lb";d.innerHTML=`<img src="${i.src}" alt="${i.alt}">`;d.onclick=()=>d.remove();document.body.append(d)}));')
-open(".gitlab-ci.yml","w").write('pages:\n  stage: deploy\n  image: python:3.12-alpine\n  script:\n    - python build.py\n  pages: true\n  artifacts:\n    paths:\n      - public\n  rules:\n    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH\n')
+open("docs/.nojekyll","w").write("")
+open("docs/CNAME","w").write(C["DOMAIN"].replace("https://","").replace("http://","")+"\n")
