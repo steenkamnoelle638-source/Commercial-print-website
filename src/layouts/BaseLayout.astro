@@ -5,7 +5,7 @@ const base = import.meta.env.BASE_URL;
 const canonicalPath = canonical.startsWith('/') ? canonical.slice(1) : canonical;
 const canonicalUrl = new URL(`${base}${canonicalPath}`, site).toString();
 ---
-<!doctype html><html lang={lang}><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="generator" content={Astro.generator}/><title>{title}</title><meta name="description" content={description}/><meta name="keywords" content={keywords}/><meta name="robots" content="index,follow,max-image-preview:large"/><link rel="canonical" href={canonicalUrl}/><link rel="alternate" hreflang="x-default" href={canonicalUrl}/><link rel="alternate" hreflang="en-za" href={`${site}${base}za/`}/><meta property="og:type" content="website"/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:url" content={canonicalUrl}/><meta name="theme-color" content="#173c32"/><link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`}/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="sitemap" type="application/xml" href={`${base}sitemap-index.xml`}/>
+<!doctype html><html lang={lang}><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="generator" content={Astro.generator}/><title>{title}</title><meta name="description" content={description}/><meta name="keywords" content={keywords}/><meta name="robots" content="index,follow,max-image-preview:large"/><link rel="canonical" href={canonicalUrl}/><link rel="alternate" hreflang="x-default" href={canonicalUrl}/><link rel="alternate" hreflang="en-za" href={`${site}${base}za/`}/><meta property="og:type" content="website"/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:url" content={canonicalUrl}/><meta name="theme-color" content="#073B75"/><link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`}/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><link rel="sitemap" type="application/xml" href={`${base}sitemap-index.xml`}/>
 <!-- Replace G-XXXXXXXXXX with the real GA4 Measurement ID after creating a Google Analytics property. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script><script is:inline>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX',{anonymize_ip:true});</script>
 <style is:global>
@@ -16,6 +16,63 @@ const canonicalUrl = new URL(`${base}${canonicalPath}`, site).toString();
 
 @media(max-width:850px){.site-header nav{display:none;position:absolute;top:85px;left:0;right:0;background:var(--cream);padding:20px 24px 26px;box-shadow:0 18px 25px #173c3210;align-items:stretch;gap:18px;flex-direction:column}.site-header nav.is-open{display:flex}.menu-toggle{display:block}.hero-grid,.split,.quote-grid,.product-layout{grid-template-columns:1fr;gap:38px}.portfolio-heading{grid-template-columns:1fr;gap:15px}.portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding:65px 0}.hero-art{min-height:360px;max-width:470px;width:100%;margin:auto}.trust-inner{grid-template-columns:1fr;gap:15px}.products-grid{grid-template-columns:repeat(2,1fr)}.quote-copy{position:static}.footer-main{grid-template-columns:1fr;gap:22px}.section{padding:72px 0}.steps{grid-template-columns:1fr;gap:30px}.feature-panel{min-height:340px}}
 @media(max-width:560px){.container{width:min(100% - 32px,1160px)}.portfolio-section{padding:60px 0}.portfolio-grid{grid-template-columns:1fr 1fr;gap:10px}.portfolio-art{height:205px}.portfolio-info{padding:15px 12px}.portfolio-info h3{font-size:.92rem}.portfolio-type{font-size:.5rem}.portfolio-arrow{width:28px;height:28px;flex-basis:28px}.calendar-sheet{transform:scale(.86) rotate(-5deg)}.book-stack{transform:scale(.85)}.retail-sheet{transform:scale(.85) rotate(3deg)}.package-box{transform:scale(.85) rotate(-5deg)}.site-header{height:74px;padding:0 16px}.site-header nav{top:73px}.brand{font-size:.9rem}.brand-mark{width:37px;height:37px}.hero{padding:54px 0}.hero-art{min-height:310px;transform:scale(.86);margin:-10px auto}.art-sticker{right:-10px}.products-grid{grid-template-columns:1fr}.product-card{min-height:210px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.quote-form{padding:22px}.footer-bottom{flex-direction:column}.whatsapp-float{right:14px;bottom:14px;padding:14px 18px;font-size:.95rem;min-height:56px}.section{padding:60px 0}.page-hero{padding:55px 0}.search-wrap{flex-direction:column}.search-wrap .button{width:100%}}
+
+/* Refined corporate finish: confident navy, clean whites and restrained red accents. */
+:root{--forest:#073B75;--forest2:#15599B;--lime:#E5394B;--cream:#F5F7FA;--ink:#142338;--muted:#5D6B7B;--line:#DFE6EF;--white:#fff;--radius:22px;--shadow-soft:0 18px 50px rgba(7,59,117,.09)}
+body{background:#F5F7FA;color:#142338}
+::selection{background:#E5394B;color:#fff}
+.site-header{background:rgba(255,255,255,.94);border-bottom-color:rgba(7,59,117,.12);box-shadow:0 4px 24px rgba(7,59,117,.035)}
+.brand-mark{border-radius:12px;box-shadow:0 6px 15px rgba(229,57,75,.18)}
+.site-header nav{gap:clamp(14px,2vw,28px)}
+.nav-cta,.button{box-shadow:0 8px 20px rgba(7,59,117,.12)}
+.button.light{color:#fff;box-shadow:0 8px 22px rgba(229,57,75,.22)}
+.button.outline{border-color:rgba(255,255,255,.48)}
+.hero{background:radial-gradient(ellipse at 78% 12%,rgba(38,112,181,.65) 0%,transparent 44%),linear-gradient(120deg,#062D5B 0%,#073B75 58%,#0A477F 100%)}
+.hero:after{border-color:rgba(255,255,255,.16);box-shadow:0 0 0 70px rgba(255,255,255,.025),0 0 0 140px rgba(229,57,75,.035)}
+.hero .eyebrow{color:#FF8791}.hero .eyebrow:before{background:#E5394B}
+.hero-copy{color:#E0EAF5}.hero-note{color:#D7E5F4}.status-dot{background:#E5394B;box-shadow:0 0 0 5px rgba(229,57,75,.18)}
+.art-card{box-shadow:0 30px 80px rgba(0,20,48,.34)}
+.art-back{background:linear-gradient(145deg,#fff 0%,#EAF2FA 100%)}
+.art-front{background:linear-gradient(145deg,#F24B5C 0%,#D9273C 100%);color:#fff}
+.art-sticker{background:#15599B;border-color:rgba(255,255,255,.5);box-shadow:0 15px 35px rgba(0,20,48,.2)}
+.trust-strip{box-shadow:0 10px 30px rgba(7,59,117,.025)}
+.trust-icon{background:#E7F0FA;color:#073B75}
+.portfolio-card{background:#fff;border-color:#E1E8F0;box-shadow:0 5px 18px rgba(7,59,117,.035)}
+.portfolio-card:hover{box-shadow:0 22px 48px rgba(7,59,117,.13);border-color:#9AB7D5}
+.portfolio-art:before,.portfolio-art:after{border-color:rgba(7,59,117,.12)}
+.art-caption{color:#334F6C}
+.portfolio-calendar .portfolio-art{background:linear-gradient(145deg,#EAF3FC,#D5E5F5)}
+.portfolio-publishing .portfolio-art{background:linear-gradient(145deg,#FBE7E9,#F4D4D9)}
+.portfolio-retail .portfolio-art{background:linear-gradient(145deg,#FBE9EB,#F5D4D9)}
+.portfolio-packaging .portfolio-art{background:linear-gradient(145deg,#E7F1FB,#CFE1F3)}
+.portfolio-info{border-top:1px solid #EEF2F7}
+.portfolio-arrow{background:#E8F0F9;color:#073B75}
+.portfolio-card:hover .portfolio-arrow{background:#E5394B;color:#fff}
+.portfolio-disclaimer{color:#68788B}
+.product-card{border-color:#E1E8F0;box-shadow:0 8px 24px rgba(7,59,117,.035)}
+.product-card:hover{border-color:#9AB7D5;box-shadow:0 18px 38px rgba(7,59,117,.10)}
+.card-number,.portfolio-type{color:#60758B}
+.feature-panel{background:linear-gradient(145deg,#EAF3FC,#DCEAF8)}
+.feature-panel:after{color:rgba(21,89,155,.09)}
+.feature-tag{color:#073B75;border:1px solid #D6E3F1}
+.check-list li:before{background:#FCE3E6;color:#B51F31}
+.step{border-top-color:#E5394B}.step-num{color:#15599B}
+.quote-section{background:linear-gradient(145deg,#EAF2FA,#F5F7FA)}
+.contact-note{border:1px solid #E1E8F0;box-shadow:0 8px 22px rgba(7,59,117,.04)}
+.quote-form{box-shadow:0 22px 55px rgba(7,59,117,.09);border:1px solid #E3EAF2}
+.field input,.field textarea,.field select{border-color:#D8E2ED;background:#FBFDFF}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:#15599B;box-shadow:0 0 0 3px rgba(21,89,155,.12)}
+.site-footer{background:linear-gradient(120deg,#061F40,#073B75);border-top:4px solid #E5394B}
+.footer-link{color:#FF8791}.brand-light .brand-mark{background:#E5394B;color:#fff}
+.page-hero{background:radial-gradient(ellipse at 80% 0%,rgba(38,112,181,.55),transparent 48%),linear-gradient(120deg,#062D5B,#073B75);}
+.local-badge{background:#E8F1FA;color:#073B75}
+.whatsapp-float{right:24px;bottom:24px;background:#20C96B;color:#062D20;border:2px solid #fff;box-shadow:0 14px 36px rgba(3,35,20,.30),0 0 0 5px rgba(32,201,107,.12);padding:16px 23px;min-height:60px;letter-spacing:.005em}
+.whatsapp-float:hover{transform:translateY(-4px) scale(1.025);box-shadow:0 18px 42px rgba(3,35,20,.35),0 0 0 7px rgba(32,201,107,.15)}
+.whatsapp-float svg{width:25px;height:25px}
+@media(prefers-reduced-motion:no-preference){.portfolio-card,.product-card,.button,.nav-cta,.whatsapp-float{transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease,background .22s ease}.product-card:hover{transform:translateY(-4px)}}
+@media(max-width:850px){.site-header nav{background:#fff;box-shadow:0 18px 35px rgba(7,59,117,.12)}.hero-grid{gap:28px}.hero-art{margin-top:6px}}
+@media(max-width:560px){.whatsapp-float{right:14px;bottom:14px;padding:13px 17px;min-height:55px;font-size:.9rem;box-shadow:0 10px 28px rgba(3,35,20,.3)}.whatsapp-float svg{width:22px;height:22px}.hero h1{font-size:clamp(2.5rem,12vw,3.6rem)}.portfolio-card{border-radius:15px}}
+
 </style></head><body><slot/><a class="whatsapp-float" href="https://wa.me/27XXXXXXXXX?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20printing%20project" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
 <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.05 0C5.48 0 .13 5.34.13 11.91c0 2.1.55 4.15 1.6 5.96L0 24l6.28-1.65a11.9 11.9 0 0 0 5.76 1.47h.01c6.57 0 11.92-5.34 11.92-11.91 0-3.18-1.24-6.17-3.45-8.43ZM12.05 21.8a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.73.98 1-3.64-.24-.37a9.85 9.85 0 0 1-1.52-5.27c0-5.46 4.45-9.9 9.91-9.9a9.83 9.83 0 0 1 7.01 2.9 9.83 9.83 0 0 1 2.9 7.01c0 5.46-4.45 9.9-9.91 9.9Zm5.43-7.41c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.5 1.7.64.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/></svg>
 <span>Chat on WhatsApp</span></a></body></html>
