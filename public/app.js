@@ -1,0 +1,1 @@
+document.querySelectorAll(".gal img").forEach(i=>i.addEventListener("click",()=>{const d=document.createElement("div");d.className="lb";d.innerHTML=`<img src="${i.src}" alt="${i.alt}">`;d.onclick=()=>d.remove();document.body.append(d)}));
