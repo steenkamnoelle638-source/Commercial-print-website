@@ -1,0 +1,9 @@
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Your Print Partner home"><span class="brand-mark">P</span><span>Your Print Partner<small>COMMERCIAL PRINT · DISTRIBUTION</small></span></a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu <span>☰</span></button>
+  <nav id="main-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/#services">Services</a><a href="/products/calendars">Products</a><a href="/#about">About</a><a class="nav-cta" href="/#quote">Request a quote ↗</a></nav>
+</header>
+<script is:inline>
+  const toggle = document.querySelector('.menu-toggle'); const nav = document.querySelector('#main-nav');
+  toggle?.addEventListener('click', () => { const open = toggle.getAttribute('aria-expanded') === 'true'; toggle.setAttribute('aria-expanded', String(!open)); nav?.classList.toggle('is-open', !open); });
+</script>
