@@ -42,3 +42,12 @@ npm run preview
 
 ## SEO notes
 This starter improves crawlability and page targeting but cannot guarantee rankings, Discover inclusion, AI-feature citations, or a particular PageSpeed score. Search performance depends on real content quality, authority, user intent, site reputation, competition and ongoing measurement. Add verified business details and useful original project examples over time.
+
+
+## GitHub Pages deployment
+
+This repository includes `.github/workflows/astro.yml`. In GitHub, open **Settings → Pages** and set **Build and deployment → Source** to **GitHub Actions** (not Deploy from a branch/Jekyll). Push the files to the `main` branch; the workflow will build Astro and publish `dist`.
+
+The current workflow assumes the repository is named `Commercial-print-website` and therefore builds project-page URLs under `/Commercial-print-website/`. If the repository name changes, update the `base` value in `astro.config.mjs`. If you connect a custom domain to GitHub Pages, change the base to `/`.
+
+Before publishing, replace the example domain and WhatsApp placeholder number in `src/layouts/BaseLayout.astro`. The WhatsApp link currently contains `27XXXXXXXXX`, so it will not reach a real account until the correct number is entered.
