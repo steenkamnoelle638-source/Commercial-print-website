@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+export function getStaticPaths(){ return [
+  { params: { slug: 'poppy-act' }, props: { term: { title: 'POPIA', heading: 'Protection of Personal Information', intro: 'We respect the privacy of people who contact Stoney Steenkamp and Novus Print. Personal information is used only to respond to an enquiry, prepare a quote or provide the requested service.' } } },
+  { params: { slug: 'privacy-policy' }, props: { term: { title: 'Privacy policy', heading: 'Privacy policy', intro: 'This page explains how information shared through this website may be used. We do not sell personal information, and enquiries are handled for legitimate business communication and print coordination.' } } },
+  { params: { slug: 'cookies-policy' }, props: { term: { title: 'Cookies policy', heading: 'Cookies policy', intro: 'This website may use essential technical storage and limited analytics or form tools where configured. These tools help the website function and help us understand general website use.' } } },
+]; }
+const { term } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+<BaseLayout title={`${term.title} | Stoney Steenkamp · Novus Print`} description={term.intro} canonical={`/terms/${Astro.params.slug}`}>
+<Header/><main><section class="page-hero"><div class="container"><div class="breadcrumbs"><a href={base}>Home</a> / Terms of use / {term.title}</div><span class="eyebrow">Terms of use</span><h1>{term.heading}</h1><p>{term.intro}</p></div></section><section class="section"><div class="container legal-copy"><h2>How this applies to this website</h2><p>This website represents Stoney Steenkamp as a trusted commercial print contact for Novus Print. Any enquiry details submitted through the quote form are used to follow up on the requested print project.</p><h2>Questions</h2><p>For questions about this page or how your information is handled, contact <a href="mailto:Stoney.Steenkamp@novusprint.co.za">Stoney.Steenkamp@novusprint.co.za</a>.</p><a class="button" href={`${base}#quote`}>Contact Stoney ↗</a></div></section></main><Footer/>
+</BaseLayout>
