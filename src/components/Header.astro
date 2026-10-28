@@ -4,7 +4,7 @@ const base = import.meta.env.BASE_URL;
 <header class="site-header">
   <a class="brand" href={base} aria-label="Stoney Steenkamp Novus Print home"><span class="brand-mark">P</span><span>Stoney Steenkamp<small>NOVUS PRINT · GROUP SALES EXECUTIVE</small></span></a>
   <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu <span>☰</span></button>
-  <nav id="main-nav" aria-label="Main navigation"><a href={base}>Home</a><a href={`${base}#services`}>Services</a><a href={`${base}#about`}>Why work with me</a><a href={`${base}#quote`}>Contact</a><a class="nav-cta" href={`${base}#quote`}>Get a quote ↗</a></nav>
+  <nav id="main-nav" aria-label="Main navigation"><a href={base}>Home</a><a href={`${base}#services`}>Services</a><a href={`${base}#products`}>Products</a><a href={`${base}#about`}>Why work with me</a><a href={`${base}#quote`}>Contact</a><a href="https://www.novusprint.co.za/" target="_blank" rel="noopener">Novus Print ↗</a><a class="nav-cta" href={`${base}#quote`}>Get a quote ↗</a></nav>
 </header>
 <script is:inline>
   const toggle = document.querySelector('.menu-toggle'); const nav = document.querySelector('#main-nav');
